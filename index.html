@@ -31,7 +31,7 @@
       margin: 0 auto;
       background: linear-gradient(135deg, #151515 0, #050505 36%, #151515 100%);
       border-radius: 28px;
-      padding: 18px 18px 24px;
+      padding: 16px 16px 22px;
       border: 1px solid rgba(214,180,103,0.35);
       box-shadow: var(--shadow-soft);
       position: relative;
@@ -52,18 +52,18 @@
       z-index: 1;
       display: flex;
       flex-direction: column;
-      gap: 22px;
+      gap: 16px;
     }
     .brand-row {
       display: flex;
       align-items: center;
-      gap: 14px;
-      margin-bottom: 18px;
+      gap: 12px;
+      margin-bottom: 14px;
     }
     .logo-mark {
-      width: 52px;
-      height: 52px;
-      border-radius: 16px;
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
       background: radial-gradient(circle at 20% 0%, #f7e3af, #d1a753 46%, #80612b 100%);
       display: flex;
       align-items: center;
@@ -78,14 +78,14 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 6px 10px;
+      padding: 5px 9px;
       border-radius: 999px;
       border: 1px solid rgba(214,180,103,0.35);
       background: rgba(12,12,12,0.72);
       backdrop-filter: blur(12px);
       color: var(--muted);
-      font-size: 10px;
-      letter-spacing: 0.12em;
+      font-size: 9px;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
     }
     .badge-dot {
@@ -95,21 +95,21 @@
     }
     h1 {
       font-family: "Times New Roman", "Georgia", serif;
-      font-size: 30px;
-      letter-spacing: 0.12em;
+      font-size: 25px;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--soft-gold);
-      margin-bottom: 4px;
-      line-height: 0.98;
+      margin-bottom: 3px;
+      line-height: 0.94;
     }
-    h1 span { display: block; font-size: 24px; letter-spacing: 0.16em; }
+    h1 span { display: block; font-size: 19px; letter-spacing: 0.12em; }
     .subtitle {
       font-family: "Times New Roman", "Georgia", serif;
-      font-size: 14px;
-      letter-spacing: 0.14em;
+      font-size: 12px;
+      letter-spacing: 0.11em;
       text-transform: uppercase;
       color: var(--muted);
-      margin-bottom: 20px;
+      margin-bottom: 14px;
     }
     .lang-toggle {
       display: flex;
@@ -119,19 +119,19 @@
       border-radius: 999px;
       background: rgba(5,5,5,0.85);
       border: 1px solid rgba(214,180,103,0.35);
-      margin-bottom: 18px;
+      margin-bottom: 14px;
     }
     .lang-btn {
       border: none;
       outline: none;
       flex: 1;
-      min-height: 42px;
-      padding: 8px 12px;
+      min-height: 40px;
+      padding: 7px 12px;
       border-radius: 999px;
       background: transparent;
       color: var(--muted);
-      font-size: 12px;
-      letter-spacing: 0.1em;
+      font-size: 11px;
+      letter-spacing: 0.09em;
       text-transform: uppercase;
       cursor: pointer;
       transition: background var(--transition), color var(--transition), transform var(--transition);
@@ -142,19 +142,19 @@
       transform: translateY(-0.5px);
     }
     .about {
-      font-size: 14px;
-      line-height: 1.75;
+      font-size: 13px;
+      line-height: 1.72;
       color: var(--text);
       max-width: none;
-      margin-bottom: 22px;
+      margin-bottom: 16px;
     }
     .about span.label {
       text-transform: uppercase;
-      font-size: 11px;
-      letter-spacing: 0.18em;
+      font-size: 10px;
+      letter-spacing: 0.16em;
       color: var(--muted);
       display: block;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
     .about[data-lang] { display: none; }
     .about[data-lang="en"].active,
@@ -162,15 +162,15 @@
     .actions {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 12px;
+      gap: 10px;
     }
     .btn {
       border-radius: 999px;
       border: 1px solid rgba(214,180,103,0.65);
-      min-height: 52px;
-      padding: 12px 18px;
-      font-size: 12px;
-      letter-spacing: 0.12em;
+      min-height: 48px;
+      padding: 11px 18px;
+      font-size: 11px;
+      letter-spacing: 0.11em;
       text-transform: uppercase;
       display: inline-flex;
       align-items: center;
@@ -210,10 +210,10 @@
     }
     .card {
       width: 100%;
-      max-width: 320px;
+      max-width: none;
       margin: 0 auto;
-      border-radius: 28px;
-      padding: 22px 20px;
+      border-radius: 24px;
+      padding: 14px 15px;
       background: radial-gradient(circle at top, #17130e, #050505 55%, #0f0c07 100%);
       border: 1px solid rgba(214,180,103,0.45);
       box-shadow:
@@ -232,10 +232,25 @@
       mix-blend-mode: soft-light;
       pointer-events: none;
     }
-    .card-inner { position: relative; z-index: 1; }
-    .avatar-wrap { display: flex; justify-content: center; margin-bottom: 14px; }
+    .card-inner {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .card-copy {
+      min-width: 0;
+      flex: 1;
+    }
+    .avatar-wrap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 0;
+      flex: 0 0 auto;
+    }
     .avatar {
-      width: 108px; height: 108px;
+      width: 72px; height: 72px;
       border-radius: 50%;
       overflow: hidden;
       border: 2px solid rgba(214,180,103,0.75);
@@ -246,40 +261,40 @@
       object-fit: cover; display: block;
     }
     .card-name {
-      text-align: center;
+      text-align: left;
       font-family: "Times New Roman", "Georgia", serif;
-      font-size: 16px;
-      letter-spacing: 0.1em;
+      font-size: 14px;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--soft-gold);
       margin-bottom: 2px;
     }
     .card-role {
-      text-align: center;
-      font-size: 11px;
-      letter-spacing: 0.14em;
+      text-align: left;
+      font-size: 9px;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--muted);
-      margin-bottom: 14px;
+      margin-bottom: 10px;
     }
     .card-divider {
       height: 1px; width: 100%;
       background: linear-gradient(90deg, transparent, rgba(214,180,103,0.6), transparent);
-      margin-bottom: 14px;
+      margin-bottom: 10px;
     }
     .card-meta {
       display: grid;
-      gap: 6px;
-      font-size: 11px;
+      gap: 4px;
+      font-size: 9px;
       color: var(--muted);
-      letter-spacing: 0.11em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      text-align: center;
+      text-align: left;
     }
     .footer-note {
-      margin-top: 18px;
-      font-size: 10px;
-      letter-spacing: 0.14em;
+      margin-top: 14px;
+      font-size: 9px;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       color: rgba(155,140,102,0.85);
       text-align: center;
@@ -309,6 +324,21 @@
       }
       .card {
         max-width: 290px;
+        border-radius: 28px;
+        padding: 22px 20px;
+      }
+      .card-inner {
+        display: block;
+      }
+      .card-copy {
+        min-width: auto;
+      }
+      .avatar-wrap {
+        margin-bottom: 14px;
+      }
+      .avatar {
+        width: 108px;
+        height: 108px;
       }
       .actions {
         display: flex;
@@ -316,6 +346,9 @@
       }
       .btn {
         justify-content: flex-start;
+      }
+      .btn span.icon {
+        font-size: 13px;
       }
       h1 {
         font-size: 34px;
@@ -328,6 +361,24 @@
       .subtitle {
         font-size: 17px;
         letter-spacing: 0.18em;
+      }
+      .card-name,
+      .card-role,
+      .card-meta {
+        text-align: center;
+      }
+      .card-role {
+        font-size: 11px;
+        letter-spacing: 0.14em;
+        margin-bottom: 14px;
+      }
+      .card-divider {
+        margin-bottom: 14px;
+      }
+      .card-meta {
+        gap: 6px;
+        font-size: 11px;
+        letter-spacing: 0.11em;
       }
       .footer-note {
         text-align: left;
@@ -361,24 +412,6 @@
           <button class="lang-btn" data-lang-btn="es" type="button">Español</button>
         </div>
 
-        <article class="about active" data-lang="en">
-          <span class="label">About</span>
-          <p>
-            Specialized in global business, capital markets, and long-term strategic partnerships.
-            Focused on connecting people, ideas, and investment opportunities across borders with a disciplined,
-            analytical, and data-driven approach to decision-making.
-          </p>
-        </article>
-
-        <article class="about" data-lang="es">
-          <span class="label">Perfil</span>
-          <p>
-            Especializado en negocios globales, mercados de capitales y alianzas estratégicas de largo plazo.
-            Enfocado en conectar personas, ideas y oportunidades de inversión a través de fronteras con un enfoque
-            disciplinado, analítico y basado en datos para la toma de decisiones.
-          </p>
-        </article>
-
         <div class="actions">
           <a class="btn" href="https://wa.me/17783187994" target="_blank" rel="noopener">
             <span class="icon">WA</span>
@@ -398,6 +431,24 @@
           </a>
         </div>
 
+        <article class="about active" data-lang="en">
+          <span class="label">About</span>
+          <p>
+            Specialized in global business, capital markets, and long-term strategic partnerships.
+            Focused on connecting people, ideas, and investment opportunities across borders with a disciplined,
+            analytical, and data-driven approach to decision-making.
+          </p>
+        </article>
+
+        <article class="about" data-lang="es">
+          <span class="label">Perfil</span>
+          <p>
+            Especializado en negocios globales, mercados de capitales y alianzas estratégicas de largo plazo.
+            Enfocado en conectar personas, ideas y oportunidades de inversión a través de fronteras con un enfoque
+            disciplinado, analítico y basado en datos para la toma de decisiones.
+          </p>
+        </article>
+
         <p class="footer-note" data-en="Scan the business card to access live contact details and updated links." data-es="Escanea la tarjeta para acceder a datos de contacto actualizados y enlaces vigentes.">Scan the business card to access live contact details and updated links.</p>
       </section>
 
@@ -409,12 +460,14 @@
                 <img src="profile.jpg" alt="Portrait of Juan Moscoso" />
               </div>
             </div>
-            <div class="card-name">Juan Moscoso</div>
-            <div class="card-role" data-en="Bachelor of Commerce — BCom" data-es="Bachelor of Commerce — BCom">Bachelor of Commerce &mdash; BCom</div>
-            <div class="card-divider"></div>
-            <div class="card-meta">
-              <div data-en="Global Business &amp; Investments" data-es="Negocios Globales e Inversiones">Global Business &amp; Investments</div>
-              <div data-en="English &amp; Spanish" data-es="Inglés y Español">English &amp; Spanish</div>
+            <div class="card-copy">
+              <div class="card-name">Juan Moscoso</div>
+              <div class="card-role" data-en="Bachelor of Commerce — BCom" data-es="Bachelor of Commerce — BCom">Bachelor of Commerce &mdash; BCom</div>
+              <div class="card-divider"></div>
+              <div class="card-meta">
+                <div data-en="Global Business &amp; Investments" data-es="Negocios Globales e Inversiones">Global Business &amp; Investments</div>
+                <div data-en="English &amp; Spanish" data-es="Inglés y Español">English &amp; Spanish</div>
+              </div>
             </div>
           </div>
         </div>
