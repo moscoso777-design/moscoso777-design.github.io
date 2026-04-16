@@ -187,8 +187,16 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-width: 18px;
-      font-size: 13px;
+      width: 16px;
+      height: 16px;
+      flex: 0 0 16px;
+      color: currentColor;
+    }
+    .btn span.icon svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+      fill: currentColor;
     }
     .btn:hover {
       transform: translateY(-1.5px);
@@ -414,11 +422,19 @@
 
         <div class="actions">
           <a class="btn" href="https://wa.me/17783187994" target="_blank" rel="noopener">
-            <span class="icon">WA</span>
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img" focusable="false">
+                <path d="M12.04 2C6.5 2 2 6.42 2 11.86c0 1.91.56 3.77 1.62 5.36L2.07 22l4.96-1.5a10.15 10.15 0 0 0 5 1.3h.01c5.54 0 10.03-4.42 10.03-9.86S17.58 2 12.04 2Zm0 18.13h-.01a8.44 8.44 0 0 1-4.31-1.19l-.31-.18-2.94.89.96-2.81-.2-.29a8.09 8.09 0 0 1-1.3-4.39c0-4.52 3.68-8.19 8.12-8.19 2.16 0 4.18.83 5.71 2.34a8.07 8.07 0 0 1 2.37 5.75c0 4.51-3.68 8.18-8.11 8.18Zm4.49-6.13c-.24-.12-1.43-.7-1.65-.77-.22-.08-.38-.12-.54.12-.16.23-.62.77-.76.93-.14.16-.28.18-.52.06-.24-.12-1-.36-1.91-1.14-.71-.61-1.19-1.36-1.33-1.59-.14-.23-.01-.35.11-.47.11-.11.24-.29.36-.43.12-.14.16-.24.24-.39.08-.16.04-.29-.02-.41-.06-.12-.54-1.28-.74-1.75-.2-.48-.4-.41-.54-.42h-.46c-.16 0-.41.06-.63.29-.22.23-.84.81-.84 1.98s.86 2.3.98 2.46c.12.16 1.68 2.67 4.15 3.64.59.23 1.05.37 1.41.47.59.16 1.13.14 1.56.08.48-.07 1.43-.58 1.63-1.15.2-.57.2-1.05.14-1.15-.06-.1-.22-.16-.46-.27Z"/>
+              </svg>
+            </span>
             <span data-en="WhatsApp" data-es="WhatsApp">WhatsApp</span>
           </a>
           <a class="btn" href="tel:+17783187994">
-            <span class="icon">&#9742;</span>
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img" focusable="false">
+                <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.31.56 3.57.56a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.26.19 2.45.56 3.57a1 1 0 0 1-.24 1.02l-2.2 2.2Z"/>
+              </svg>
+            </span>
             <span data-en="Phone" data-es="Teléfono">Phone</span>
           </a>
           <a class="btn" href="mailto:moscoso777@gmail.com">
@@ -426,7 +442,11 @@
             <span data-en="Email" data-es="Correo">Email</span>
           </a>
           <a class="btn secondary" href="https://www.linkedin.com/in/juan-moscoso-3595bb21b" target="_blank" rel="noopener">
-            <span class="icon">in</span>
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img" focusable="false">
+                <path d="M5.5 8.5A1.5 1.5 0 1 1 5.5 5a1.5 1.5 0 0 1 0 3.5ZM4 10h3v10H4V10Zm5 0h2.87v1.37h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.59V20h-3v-4.95c0-1.18-.02-2.7-1.64-2.7-1.64 0-1.89 1.28-1.89 2.61V20H9V10Z"/>
+              </svg>
+            </span>
             <span data-en="LinkedIn" data-es="LinkedIn">LinkedIn</span>
           </a>
         </div>
