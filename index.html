@@ -63,17 +63,16 @@
     .logo-mark {
       width: 44px;
       height: 44px;
-      border-radius: 14px;
-      background: radial-gradient(circle at 20% 0%, #f7e3af, #d1a753 46%, #80612b 100%);
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow:
-        0 0 0 1px rgba(5,5,5,0.85),
-        0 14px 30px rgba(0,0,0,0.88);
-      overflow: hidden;
     }
-    .logo-mark img { width: 82%; height: auto; display: block; }
+    .logo-mark img {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: saturate(1.14) brightness(1.08) contrast(1.06) drop-shadow(0 0 8px rgba(240, 216, 154, 0.26));
+    }
     .badge {
       display: inline-flex;
       align-items: center;
@@ -163,6 +162,7 @@
       display: grid;
       grid-template-columns: 1fr;
       gap: 10px;
+      margin-bottom: 18px;
     }
     .btn {
       border-radius: 999px;
@@ -299,15 +299,11 @@
       text-transform: uppercase;
       text-align: left;
     }
-    .footer-note {
-      margin-top: 14px;
-      font-size: 9px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: rgba(155,140,102,0.85);
-      text-align: center;
+    .card-logo-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    .footer-note span { color: var(--soft-gold); }
     @media (min-width: 760px) {
       body {
         display: flex;
@@ -351,6 +347,7 @@
       .actions {
         display: flex;
         flex-wrap: wrap;
+        margin-bottom: 18px;
       }
       .btn {
         justify-content: flex-start;
@@ -388,9 +385,6 @@
         font-size: 11px;
         letter-spacing: 0.11em;
       }
-      .footer-note {
-        text-align: left;
-      }
     }
   </style>
 </head>
@@ -400,7 +394,7 @@
       <section class="left-panel">
         <div class="brand-row">
           <div class="logo-mark">
-            <img src="logo.png" alt="JF monogram logo for Juan Moscoso" />
+            <img src="logo-gold.png" alt="JF monogram logo for Juan Moscoso" />
           </div>
           <div>
             <div class="badge">
@@ -454,22 +448,20 @@
         <article class="about active" data-lang="en">
           <span class="label">About</span>
           <p>
-            Specialized in global business, capital markets, and long-term strategic partnerships.
-            Focused on connecting people, ideas, and investment opportunities across borders with a disciplined,
-            analytical, and data-driven approach to decision-making.
+            Bachelor of Commerce with a focus on global business, capital markets, and long-term strategic
+            partnerships. Driven by a disciplined, analytical, and relationship-centered approach to connecting
+            people, ideas, and investment opportunities across international markets.
           </p>
         </article>
 
         <article class="about" data-lang="es">
           <span class="label">Perfil</span>
           <p>
-            Especializado en negocios globales, mercados de capitales y alianzas estratégicas de largo plazo.
-            Enfocado en conectar personas, ideas y oportunidades de inversión a través de fronteras con un enfoque
-            disciplinado, analítico y basado en datos para la toma de decisiones.
+            Bachelor of Commerce con enfoque en negocios globales, mercados de capitales y alianzas estratégicas de
+            largo plazo. Impulsado por una visión disciplinada, analítica y orientada a las relaciones para conectar
+            personas, ideas y oportunidades de inversión en mercados internacionales.
           </p>
         </article>
-
-        <p class="footer-note" data-en="Scan the business card to access live contact details and updated links." data-es="Escanea la tarjeta para acceder a datos de contacto actualizados y enlaces vigentes.">Scan the business card to access live contact details and updated links.</p>
       </section>
 
       <aside class="right-panel">
@@ -496,30 +488,43 @@
   </main>
 
   <script>
-    const langButtons = document.querySelectorAll('[data-lang-btn]');
-    const aboutBlocks = document.querySelectorAll('.about[data-lang]');
-    const localizedText = document.querySelectorAll('[data-en][data-es]');
+    (function () {
+      var langButtons = document.querySelectorAll('[data-lang-btn]');
+      var aboutBlocks = document.querySelectorAll('.about[data-lang]');
+      var localizedText = document.querySelectorAll('[data-en][data-es]');
 
-    const applyLanguage = (lang) => {
-      document.documentElement.lang = lang;
-      langButtons.forEach(btn => {
-        btn.classList.toggle('active', btn.getAttribute('data-lang-btn') === lang);
-      });
-      aboutBlocks.forEach(block => {
-        block.classList.toggle('active', block.getAttribute('data-lang') === lang);
-      });
-      localizedText.forEach(node => {
-        node.innerHTML = node.getAttribute(`data-${lang}`);
-      });
-    };
+      function setActiveState(collection, attrName, value) {
+        Array.prototype.forEach.call(collection, function (node) {
+          var isActive = node.getAttribute(attrName) === value;
+          if (isActive) {
+            node.classList.add('active');
+          } else {
+            node.classList.remove('active');
+          }
+        });
+      }
 
-    langButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        applyLanguage(btn.getAttribute('data-lang-btn'));
-      });
-    });
+      function applyLanguage(lang) {
+        document.documentElement.lang = lang;
+        setActiveState(langButtons, 'data-lang-btn', lang);
+        setActiveState(aboutBlocks, 'data-lang', lang);
 
-    applyLanguage('en');
+        Array.prototype.forEach.call(localizedText, function (node) {
+          var value = node.getAttribute('data-' + lang);
+          if (value !== null) {
+            node.innerHTML = value;
+          }
+        });
+      }
+
+      Array.prototype.forEach.call(langButtons, function (btn) {
+        btn.onclick = function () {
+          applyLanguage(btn.getAttribute('data-lang-btn'));
+        };
+      });
+
+      applyLanguage('en');
+    }());
   </script>
 </body>
 </html>
