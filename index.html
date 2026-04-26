@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" translate="no">
 <head>
   <meta charset="UTF-8" />
   <title>Juan Moscoso - Bachelor of Commerce (BCom)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="google" content="notranslate" />
   <style>
     :root {
       --bg: #050505;
@@ -515,6 +516,10 @@
             node.innerHTML = value;
           }
         });
+
+        try {
+          window.localStorage.setItem('juan-card-language', lang);
+        } catch (error) {}
       }
 
       Array.prototype.forEach.call(langButtons, function (btn) {
@@ -523,7 +528,26 @@
         };
       });
 
-      applyLanguage('en');
+      var initialLanguage = 'en';
+
+      try {
+        var savedLanguage = window.localStorage.getItem('juan-card-language');
+        if (savedLanguage === 'en' || savedLanguage === 'es') {
+          initialLanguage = savedLanguage;
+        } else {
+          var browserLanguage = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+          if (browserLanguage.indexOf('es') === 0) {
+            initialLanguage = 'es';
+          }
+        }
+      } catch (error) {
+        var fallbackLanguage = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+        if (fallbackLanguage.indexOf('es') === 0) {
+          initialLanguage = 'es';
+        }
+      }
+
+      applyLanguage(initialLanguage);
     }());
   </script>
 </body>
