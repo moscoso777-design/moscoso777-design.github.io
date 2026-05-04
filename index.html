@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <title>Juan Moscoso - Bachelor of Commerce (BCom)</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; media-src 'none'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests; block-all-mixed-content" />
+  <meta name="referrer" content="no-referrer" />
   <meta name="google" content="notranslate" />
   <style>
     :root {
@@ -19,6 +21,12 @@
       --shadow-soft: 0 26px 60px rgba(0,0,0,0.75);
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    html {
+      background: #050505;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+    img { max-width: 100%; }
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background:
@@ -29,7 +37,9 @@
       min-height: 100vh;
       min-height: 100svh;
       display: block;
+      padding: 10px 10px 14px;
       padding: max(10px, env(safe-area-inset-top)) max(10px, env(safe-area-inset-right)) max(14px, env(safe-area-inset-bottom)) max(10px, env(safe-area-inset-left));
+      overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
     }
@@ -95,6 +105,7 @@
       border: 1px solid rgba(214,180,103,0.35);
       background: rgba(12,12,12,0.72);
       box-shadow: inset 0 1px 0 rgba(255,245,205,0.05);
+      -webkit-backdrop-filter: blur(12px);
       backdrop-filter: blur(12px);
       color: var(--muted);
       font-size: 9px;
@@ -149,6 +160,7 @@
       background: transparent;
       color: var(--muted);
       font-size: 11px;
+      font-family: inherit;
       letter-spacing: 0.09em;
       text-transform: uppercase;
       cursor: pointer;
@@ -197,11 +209,13 @@
       align-items: center;
       justify-content: center;
       gap: 9px;
+      width: 100%;
       text-decoration: none;
       color: var(--soft-gold);
       background:
         linear-gradient(180deg, rgba(240,216,154,0.08), rgba(5,5,5,0.08)),
         radial-gradient(circle at top, rgba(214,180,103,0.2), rgba(12,12,12,0.98));
+      -webkit-backdrop-filter: blur(14px);
       backdrop-filter: blur(14px);
       transition: transform var(--transition), box-shadow var(--transition), background var(--transition), border-color var(--transition);
       box-shadow:
@@ -225,11 +239,14 @@
       display: block;
       fill: currentColor;
     }
-    .btn:hover {
-      transform: translateY(-1.5px);
-      border-color: var(--soft-gold);
-      background: radial-gradient(circle at top, rgba(240,216,154,0.35), rgba(10,10,10,0.98));
-      box-shadow: 0 16px 40px rgba(0,0,0,0.95);
+    @media (hover: hover) and (pointer: fine) {
+      .btn:hover {
+        transform: translateY(-1.5px);
+        border-color: var(--soft-gold);
+        background: radial-gradient(circle at top, rgba(240,216,154,0.35), rgba(10,10,10,0.98));
+        box-shadow: 0 16px 40px rgba(0,0,0,0.95);
+      }
+      .btn.secondary:hover { color: var(--soft-gold); border-style: solid; }
     }
     .btn:active,
     .lang-btn:active {
@@ -247,7 +264,12 @@
       background: rgba(8,8,8,0.9);
       box-shadow: 0 8px 22px rgba(0,0,0,0.72);
     }
-    .btn.secondary:hover { color: var(--soft-gold); border-style: solid; }
+    @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+      .badge,
+      .btn {
+        background-color: rgba(8,8,8,0.94);
+      }
+    }
     .right-panel {
       order: -1;
       width: 100%;
@@ -402,6 +424,8 @@
         margin-bottom: 22px;
       }
       .btn {
+        width: auto;
+        flex: 1 1 150px;
         justify-content: flex-start;
       }
       .btn span.icon {
@@ -438,6 +462,16 @@
         letter-spacing: 0.11em;
       }
     }
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -467,7 +501,7 @@
         </div>
 
         <div class="actions">
-          <a class="btn" href="https://wa.me/17783187994" target="_blank" rel="noopener">
+          <a class="btn" href="https://wa.me/17783187994" target="_blank" rel="noopener noreferrer">
             <span class="icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" role="img" focusable="false">
                 <path d="M12.04 2C6.5 2 2 6.42 2 11.86c0 1.91.56 3.77 1.62 5.36L2.07 22l4.96-1.5a10.15 10.15 0 0 0 5 1.3h.01c5.54 0 10.03-4.42 10.03-9.86S17.58 2 12.04 2Zm0 18.13h-.01a8.44 8.44 0 0 1-4.31-1.19l-.31-.18-2.94.89.96-2.81-.2-.29a8.09 8.09 0 0 1-1.3-4.39c0-4.52 3.68-8.19 8.12-8.19 2.16 0 4.18.83 5.71 2.34a8.07 8.07 0 0 1 2.37 5.75c0 4.51-3.68 8.18-8.11 8.18Zm4.49-6.13c-.24-.12-1.43-.7-1.65-.77-.22-.08-.38-.12-.54.12-.16.23-.62.77-.76.93-.14.16-.28.18-.52.06-.24-.12-1-.36-1.91-1.14-.71-.61-1.19-1.36-1.33-1.59-.14-.23-.01-.35.11-.47.11-.11.24-.29.36-.43.12-.14.16-.24.24-.39.08-.16.04-.29-.02-.41-.06-.12-.54-1.28-.74-1.75-.2-.48-.4-.41-.54-.42h-.46c-.16 0-.41.06-.63.29-.22.23-.84.81-.84 1.98s.86 2.3.98 2.46c.12.16 1.68 2.67 4.15 3.64.59.23 1.05.37 1.41.47.59.16 1.13.14 1.56.08.48-.07 1.43-.58 1.63-1.15.2-.57.2-1.05.14-1.15-.06-.1-.22-.16-.46-.27Z"/>
@@ -487,7 +521,7 @@
             <span class="icon">@</span>
             <span data-en="Email" data-es="Correo">Email</span>
           </a>
-          <a class="btn secondary" href="https://www.linkedin.com/in/juan-moscoso-3595bb21b" target="_blank" rel="noopener">
+          <a class="btn secondary" href="https://www.linkedin.com/in/juan-moscoso-3595bb21b" target="_blank" rel="noopener noreferrer">
             <span class="icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" role="img" focusable="false">
                 <path d="M5.5 8.5A1.5 1.5 0 1 1 5.5 5a1.5 1.5 0 0 1 0 3.5ZM4 10h3v10H4V10Zm5 0h2.87v1.37h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.59V20h-3v-4.95c0-1.18-.02-2.7-1.64-2.7-1.64 0-1.89 1.28-1.89 2.61V20H9V10Z"/>
@@ -495,7 +529,7 @@
             </span>
             <span data-en="LinkedIn" data-es="LinkedIn">LinkedIn</span>
           </a>
-          <a class="btn secondary" href="https://www.instagram.com/__churos/" target="_blank" rel="noopener" aria-label="Instagram profile: @__churos">
+          <a class="btn secondary" href="https://www.instagram.com/__churos/" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile: @__churos">
             <span class="icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" role="img" focusable="false">
                 <path d="M8 3h8c2.76 0 5 2.24 5 5v8c0 2.76-2.24 5-5 5H8c-2.76 0-5-2.24-5-5V8c0-2.76 2.24-5 5-5Zm0 2a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm4 3.75A3.25 3.25 0 1 1 12 15.25 3.25 3.25 0 0 1 12 8.75Zm0 2A1.25 1.25 0 1 0 12 13.25 1.25 1.25 0 0 0 12 10.75Zm4.35-2.55a.85.85 0 1 1-.85.85.85.85 0 0 1 .85-.85Z"/>
@@ -549,60 +583,6 @@
     </div>
   </main>
 
-  <script>
-    (function () {
-      var langButtons = document.querySelectorAll('[data-lang-btn]');
-      var aboutBlocks = document.querySelectorAll('.about[data-lang]');
-      var localizedText = document.querySelectorAll('[data-en][data-es]');
-
-      function setActiveState(collection, attrName, value) {
-        Array.prototype.forEach.call(collection, function (node) {
-          var isActive = node.getAttribute(attrName) === value;
-          if (node.hasAttribute('data-lang-btn')) {
-            node.setAttribute('aria-pressed', isActive ? 'true' : 'false');
-          }
-          if (isActive) {
-            node.classList.add('active');
-          } else {
-            node.classList.remove('active');
-          }
-        });
-      }
-
-      function applyLanguage(lang) {
-        document.documentElement.lang = lang;
-        setActiveState(langButtons, 'data-lang-btn', lang);
-        setActiveState(aboutBlocks, 'data-lang', lang);
-
-        Array.prototype.forEach.call(localizedText, function (node) {
-          var value = node.getAttribute('data-' + lang);
-          if (value !== null) {
-            node.textContent = value;
-          }
-        });
-
-        try {
-          window.localStorage.setItem('juan-card-language-v2', lang);
-        } catch (error) {}
-      }
-
-      Array.prototype.forEach.call(langButtons, function (btn) {
-        btn.onclick = function () {
-          applyLanguage(btn.getAttribute('data-lang-btn'));
-        };
-      });
-
-      var initialLanguage = 'en';
-
-      try {
-        var savedLanguage = window.localStorage.getItem('juan-card-language-v2');
-        if (savedLanguage === 'en' || savedLanguage === 'es') {
-          initialLanguage = savedLanguage;
-        }
-      } catch (error) {}
-
-      applyLanguage(initialLanguage);
-    }());
-  </script>
+  <script src="card.js" defer></script>
 </body>
 </html>
