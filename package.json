@@ -1,9 +1,0 @@
-{
-  "name": "pittahaya-web",
-  "version": "1.0.0",
-  "private": true,
-  "description": "Pittahaya luxury web design site and CRM",
-  "dependencies": {
-    "@supabase/supabase-js": "^2.49.4"
-  }
-}
