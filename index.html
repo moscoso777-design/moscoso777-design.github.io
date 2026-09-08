@@ -2,9 +2,9 @@
 <html lang="en" translate="no">
 <head>
   <meta charset="UTF-8" />
-  <title>Juan Moscoso - Bachelor of Commerce (BCom)</title>
+  <title>Juan Moscoso — Founder of Pittahaya</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; media-src 'none'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests; block-all-mixed-content" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; media-src 'none'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests; block-all-mixed-content" />
   <meta http-equiv="Permissions-Policy" content="accelerometer=(), ambient-light-sensor=(), autoplay=(), battery=(), camera=(), cross-origin-isolated=(), display-capture=(), document-domain=(), encrypted-media=(), execution-while-not-rendered=(), execution-while-out-of-viewport=(), fullscreen=(), geolocation=(), gyroscope=(), keyboard-map=(), magnetometer=(), microphone=(), midi=(), navigation-override=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), serial=(), sync-xhr=(), usb=(), web-share=(), xr-spatial-tracking=(), interest-cohort=()" />
   <meta http-equiv="X-Content-Type-Options" content="nosniff" />
   <meta name="referrer" content="no-referrer" />
@@ -12,72 +12,76 @@
   <meta name="format-detection" content="telephone=no" />
   <meta name="theme-color" content="#050505" />
   <meta name="color-scheme" content="dark" />
-  <meta name="description" content="Juan Moscoso — Bachelor of Commerce (UCW). Global business and capital markets. Selectively engaged in long-term, high-quality opportunities." />
+  <meta name="description" content="Juan Moscoso — Founder of Pittahaya. We build websites, AI agents, and automation systems for small businesses and entrepreneurs." />
   <meta name="robots" content="index,follow,noimageindex,max-image-preview:standard" />
   <meta property="og:type" content="profile" />
-  <meta property="og:title" content="Juan Moscoso — Bachelor of Commerce" />
-  <meta property="og:description" content="Global business and capital markets. Connecting people, capital, and ideas." />
+  <meta property="og:title" content="Juan Moscoso — Founder of Pittahaya" />
+  <meta property="og:description" content="Websites, AI agents, and automation systems for small businesses and entrepreneurs." />
   <meta property="og:image" content="profile.jpg" />
   <meta property="og:locale" content="en_CA" />
   <meta property="og:locale:alternate" content="es_ES" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Juan Moscoso — Bachelor of Commerce" />
-  <meta name="twitter:description" content="Global business and capital markets. Connecting people, capital, and ideas." />
+  <meta name="twitter:title" content="Juan Moscoso — Founder of Pittahaya" />
+  <meta name="twitter:description" content="Websites, AI agents, and automation systems for small businesses and entrepreneurs." />
   <meta name="twitter:image" content="profile.jpg" />
   <link rel="icon" type="image/png" sizes="88x88" href="logo-gold-88.png" />
   <link rel="apple-touch-icon" href="logo-gold-88.png" />
   <link rel="canonical" href="https://pittahaya.github.io/JuanMoscoso/" />
   <style>
-    body { visibility: hidden; }
-    body.ready { visibility: visible; }
-    .about[data-lang="en"] { display: block; }
     :root {
       --bg: #050505;
-      --card: #111111;
       --gold: #d6b467;
       --gold-deep: #8f6a2b;
       --soft-gold: #f0d89a;
-      --text: #f5f3ea;
+      --text: #f6f4ec;
       --muted: #b7aa8a;
-      --radius: 26px;
+      --line: rgba(214,180,103,0.30);
+      --line-strong: rgba(214,180,103,0.55);
+      --panel: rgba(10,10,10,0.72);
       --transition: 200ms ease-out;
-      --shadow-soft: 0 26px 60px rgba(0,0,0,0.75);
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html {
-      background: #050505;
+      background: var(--bg);
       -webkit-text-size-adjust: 100%;
       text-size-adjust: 100%;
     }
-    img { max-width: 100%; }
+    img { max-width: 100%; display: block; }
+    body { visibility: hidden; }
+    body.ready { visibility: visible; }
+
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background:
-        radial-gradient(circle at 50% -10%, rgba(214,180,103,0.2), transparent 34%),
-        radial-gradient(circle at 50% 100%, rgba(94,70,28,0.18), transparent 38%),
-        linear-gradient(180deg, #050505 0%, #080703 48%, #000 100%);
+        radial-gradient(circle at 50% -8%, rgba(214,180,103,0.22), transparent 42%),
+        radial-gradient(circle at 50% 108%, rgba(94,70,28,0.20), transparent 44%),
+        linear-gradient(180deg, #050505 0%, #080703 50%, #000 100%);
+      background-attachment: fixed;
       color: var(--text);
       min-height: 100vh;
       min-height: 100svh;
-      display: block;
-      padding: 10px 10px 14px;
-      padding: max(10px, env(safe-area-inset-top)) max(10px, env(safe-area-inset-right)) max(14px, env(safe-area-inset-bottom)) max(10px, env(safe-area-inset-left));
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 18px 14px calc(20px + env(safe-area-inset-bottom));
+      padding-top: max(18px, env(safe-area-inset-top));
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
     }
+
     .shell {
       width: 100%;
-      max-width: 460px;
-      margin: 0 auto;
+      max-width: 430px;
+      margin: auto;
       background:
-        linear-gradient(145deg, rgba(55,49,36,0.66), rgba(5,5,5,0.96) 36%, rgba(37,32,24,0.9) 100%);
-      border-radius: 28px;
-      padding: 15px 15px 20px;
-      border: 1px solid rgba(214,180,103,0.42);
+        linear-gradient(158deg, rgba(52,46,33,0.55), rgba(6,6,6,0.96) 40%, rgba(34,29,20,0.85) 100%);
+      border-radius: 30px;
+      padding: 26px 22px 24px;
+      border: 1px solid var(--line);
       box-shadow:
-        0 22px 60px rgba(0,0,0,0.76),
-        inset 0 1px 0 rgba(255,245,205,0.06);
+        0 30px 70px rgba(0,0,0,0.78),
+        inset 0 1px 0 rgba(255,245,205,0.07);
       position: relative;
       overflow: hidden;
       isolation: isolate;
@@ -87,54 +91,99 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(circle at top left, rgba(214,180,103,0.16), transparent 55%),
-        radial-gradient(circle at bottom right, rgba(149,115,55,0.13), transparent 60%);
+        radial-gradient(circle at 15% 0%, rgba(214,180,103,0.15), transparent 52%),
+        radial-gradient(circle at 90% 100%, rgba(149,115,55,0.14), transparent 55%);
       mix-blend-mode: screen;
       pointer-events: none;
+      z-index: 0;
     }
-    .shell-inner {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-    .left-panel { min-width: 0; }
-    .brand-row {
+    .shell > * { position: relative; z-index: 1; }
+
+    /* Top row: logo + language toggle */
+    .top-row {
       display: flex;
       align-items: center;
+      justify-content: space-between;
       gap: 12px;
-      margin-bottom: 13px;
+      margin-bottom: 18px;
     }
-    .logo-mark {
-      width: 44px;
-      height: 44px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+    .logo-mark { width: 40px; height: 40px; flex: 0 0 auto; }
     .logo-mark img {
-      width: 100%;
-      height: auto;
-      display: block;
-      filter: saturate(1.18) brightness(1.1) contrast(1.08) drop-shadow(0 0 8px rgba(240, 216, 154, 0.26));
+      width: 100%; height: 100%;
+      filter: saturate(1.15) brightness(1.08) drop-shadow(0 0 8px rgba(240,216,154,0.28));
+    }
+    .lang-toggle {
+      display: inline-flex;
+      padding: 3px;
+      gap: 3px;
+      border-radius: 999px;
+      background: rgba(4,4,4,0.85);
+      border: 1px solid var(--line);
+      box-shadow: inset 0 1px 0 rgba(255,245,205,0.05);
+    }
+    .lang-btn {
+      border: none;
+      appearance: none;
+      min-height: 34px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: transparent;
+      color: var(--muted);
+      font-size: 11px;
+      font-family: inherit;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      transition: background var(--transition), color var(--transition);
+    }
+    .lang-btn.active {
+      background: radial-gradient(circle at top, #f7e3af, #d1a753 46%, #80612b 100%);
+      color: #171310;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.42), 0 6px 16px rgba(0,0,0,0.3);
+    }
+
+    /* Hero */
+    .hero { text-align: center; margin-bottom: 20px; }
+    .avatar-wrap {
+      width: 132px; height: 132px;
+      margin: 2px auto 16px;
+      position: relative;
+      border-radius: 50%;
+      padding: 4px;
+      background: conic-gradient(from 210deg, #f7e3af, #d1a753 30%, #80612b 55%, #f0d89a 80%, #d1a753 100%);
+      box-shadow:
+        0 18px 40px rgba(0,0,0,0.72),
+        0 0 0 1px rgba(0,0,0,0.6),
+        0 0 26px rgba(214,180,103,0.28);
+    }
+    .avatar {
+      width: 100%; height: 100%;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid rgba(6,6,6,0.9);
+      background: #0c0a07;
+    }
+    .avatar img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: 50% 22%;
     }
     .badge {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 5px 9px;
+      padding: 6px 12px;
       border-radius: 999px;
-      border: 1px solid rgba(214,180,103,0.35);
-      background: rgba(12,12,12,0.72);
-      box-shadow: inset 0 1px 0 rgba(255,245,205,0.05);
-      -webkit-backdrop-filter: blur(12px);
-      backdrop-filter: blur(12px);
+      border: 1px solid var(--line);
+      background: rgba(12,12,12,0.7);
       color: var(--muted);
-      font-size: 9px;
-      letter-spacing: 0.1em;
-      line-height: 1.3;
+      font-size: 9.5px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
+      margin-bottom: 14px;
     }
     .badge-dot {
       width: 7px; height: 7px; border-radius: 50%;
@@ -143,364 +192,171 @@
     }
     h1 {
       font-family: "Times New Roman", "Georgia", serif;
-      font-size: 28px;
-      letter-spacing: 0.1em;
+      font-size: 32px;
+      line-height: 1.02;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
       color: var(--soft-gold);
-      margin-bottom: 3px;
-      line-height: 0.94;
-      text-shadow: 0 0 18px rgba(214,180,103,0.14);
-    }
-    h1 span { display: block; font-size: 21px; letter-spacing: 0.12em; }
-    .subtitle {
-      font-family: "Times New Roman", "Georgia", serif;
-      font-size: 11px;
-      line-height: 1.45;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 13px;
-      max-width: 100%;
-    }
-    .lang-toggle {
-      display: flex;
-      width: 100%;
-      padding: 3px;
-      gap: 3px;
-      border-radius: 999px;
-      background: rgba(5,5,5,0.85);
-      border: 1px solid rgba(214,180,103,0.35);
-      box-shadow: inset 0 1px 0 rgba(255,245,205,0.05);
-      margin-bottom: 13px;
-    }
-    .lang-btn {
-      border: none;
-      outline: none;
-      flex: 1;
-      min-height: 40px;
-      padding: 7px 12px;
-      border-radius: 999px;
-      background: transparent;
-      color: var(--muted);
-      font-size: 11px;
-      font-family: inherit;
-      letter-spacing: 0.09em;
-      text-transform: uppercase;
-      cursor: pointer;
-      -webkit-tap-highlight-color: transparent;
-      transition: background var(--transition), color var(--transition), transform var(--transition);
-    }
-    .lang-btn.active {
-      background: radial-gradient(circle at top, #f7e3af, #d1a753 46%, #80612b 100%);
-      color: #111;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.42), 0 8px 18px rgba(0,0,0,0.28);
-      transform: translateY(-0.5px);
-    }
-    .about {
-      font-size: 13px;
-      line-height: 1.72;
-      color: var(--text);
-      max-width: none;
-      margin-bottom: 0;
-    }
-    .about span.label {
-      text-transform: uppercase;
-      font-size: 10px;
-      letter-spacing: 0.16em;
-      color: var(--muted);
-      display: block;
+      text-shadow: 0 0 20px rgba(214,180,103,0.16);
       margin-bottom: 8px;
     }
-    .about[data-lang] { display: none; }
-    .about[data-lang="en"].active,
-    .about[data-lang="es"].active { display: block; }
-    .actions {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 10px;
-      margin-bottom: 22px;
+    .role {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      color: var(--text);
+      margin-bottom: 4px;
     }
-    .btn {
-      border-radius: 999px;
-      border: 1px solid rgba(214,180,103,0.7);
-      min-height: 50px;
-      padding: 11px 18px;
+    .role strong { color: var(--soft-gold); font-weight: 700; }
+    .credential {
+      font-family: "Times New Roman", "Georgia", serif;
       font-size: 11px;
-      letter-spacing: 0.11em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 9px;
-      width: 100%;
-      text-decoration: none;
-      color: var(--soft-gold);
-      background:
-        linear-gradient(180deg, rgba(240,216,154,0.08), rgba(5,5,5,0.08)),
-        radial-gradient(circle at top, rgba(214,180,103,0.2), rgba(12,12,12,0.98));
-      -webkit-backdrop-filter: blur(14px);
-      backdrop-filter: blur(14px);
-      transition: transform var(--transition), box-shadow var(--transition), background var(--transition), border-color var(--transition);
-      box-shadow:
-        0 10px 28px rgba(0,0,0,0.74),
-        inset 0 1px 0 rgba(255,245,205,0.08);
-      touch-action: manipulation;
-      -webkit-tap-highlight-color: transparent;
-    }
-    .btn span.icon {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 16px;
-      height: 16px;
-      flex: 0 0 16px;
-      color: currentColor;
-    }
-    .btn span.icon svg {
-      width: 100%;
-      height: 100%;
-      display: block;
-      fill: currentColor;
-    }
-    @media (hover: hover) and (pointer: fine) {
-      .btn:hover {
-        transform: translateY(-1.5px);
-        border-color: var(--soft-gold);
-        background: radial-gradient(circle at top, rgba(240,216,154,0.35), rgba(10,10,10,0.98));
-        box-shadow: 0 16px 40px rgba(0,0,0,0.95);
-      }
-      .btn.secondary:hover { color: var(--soft-gold); border-style: solid; }
-    }
-    .btn:active,
-    .lang-btn:active {
-      transform: translateY(0.5px);
-    }
-    .btn:focus-visible,
-    .lang-btn:focus-visible {
-      outline: 2px solid rgba(240,216,154,0.9);
-      outline-offset: 3px;
-    }
-    .btn.secondary {
-      border-style: dashed;
-      border-color: rgba(214,180,103,0.5);
       color: var(--muted);
-      background: rgba(8,8,8,0.9);
-      box-shadow: 0 8px 22px rgba(0,0,0,0.72);
     }
-    @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
-      .badge,
-      .btn {
-        background-color: rgba(8,8,8,0.94);
-      }
+
+    .divider {
+      height: 1px; width: 100%;
+      background: linear-gradient(90deg, transparent, var(--line-strong), transparent);
+      margin: 20px 0;
     }
-    .right-panel {
-      order: -1;
-      width: 100%;
-    }
-    .card {
-      width: 100%;
-      max-width: none;
-      margin: 0 auto;
-      border-radius: 24px;
-      padding: 13px 14px;
-      background:
-        linear-gradient(135deg, rgba(30,24,14,0.78), rgba(2,2,2,0.94) 56%, rgba(24,19,12,0.86)),
-        radial-gradient(circle at top, #17130e, #050505 55%, #0f0c07 100%);
-      border: 1px solid rgba(214,180,103,0.5);
-      box-shadow:
-        0 18px 42px rgba(0,0,0,0.86),
-        inset 0 1px 0 rgba(255,245,205,0.06),
-        0 0 0 1px rgba(0,0,0,0.8);
+
+    /* Actions */
+    .actions { display: grid; gap: 11px; }
+    .btn {
       position: relative;
-      overflow: hidden;
-    }
-    .card::before {
-      content: "";
-      position: absolute;
-      inset: -40%;
-      background:
-        radial-gradient(circle at 20% 0%, rgba(247,227,175,0.16), transparent 54%),
-        radial-gradient(circle at 80% 120%, rgba(144,110,53,0.25), transparent 58%);
-      mix-blend-mode: soft-light;
-      pointer-events: none;
-    }
-    .card-inner {
-      position: relative;
-      z-index: 1;
+      border-radius: 16px;
+      border: 1px solid var(--line-strong);
+      min-height: 56px;
+      padding: 12px 18px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
       display: flex;
       align-items: center;
       gap: 14px;
+      width: 100%;
+      text-decoration: none;
+      color: var(--text);
+      background: rgba(9,9,9,0.9);
+      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition), background var(--transition);
+      box-shadow: 0 10px 26px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,245,205,0.05);
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
     }
-    .card-copy {
-      min-width: 0;
-      flex: 1;
-    }
-    .avatar-wrap {
-      display: flex;
+    .btn .icon {
+      display: inline-flex;
+      align-items: center;
       justify-content: center;
-      margin-bottom: 0;
-      flex: 0 0 auto;
-    }
-    .avatar {
-      width: 76px; height: 76px;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 2px solid rgba(214,180,103,0.75);
-      box-shadow:
-        0 14px 30px rgba(0,0,0,0.82),
-        0 0 0 4px rgba(214,180,103,0.08);
-    }
-    .avatar img {
-      width: 100%; height: 100%;
-      object-fit: cover; display: block;
-    }
-    .card-name {
-      text-align: left;
-      font-family: "Times New Roman", "Georgia", serif;
-      font-size: 14px;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
+      width: 40px; height: 40px;
+      flex: 0 0 40px;
+      border-radius: 12px;
+      background: rgba(214,180,103,0.12);
+      border: 1px solid var(--line);
       color: var(--soft-gold);
-      margin-bottom: 2px;
     }
-    .card-role {
-      text-align: left;
-      font-size: 9px;
-      line-height: 1.45;
-      letter-spacing: 0.09em;
+    .btn .icon svg { width: 20px; height: 20px; fill: currentColor; display: block; }
+    .btn .txt { display: flex; flex-direction: column; gap: 1px; min-width: 0; text-align: left; }
+    .btn .txt small {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+    .btn .arrow { margin-left: auto; color: var(--muted); flex: 0 0 auto; }
+    .btn .arrow svg { width: 16px; height: 16px; fill: currentColor; display: block; }
+
+    /* Primary (website) */
+    .btn.primary {
+      border-color: transparent;
+      color: #1a1509;
+      background: radial-gradient(circle at 30% 0%, #f7e3af, #d8b25e 45%, #a9803a 100%);
+      box-shadow: 0 14px 34px rgba(160,120,50,0.4), inset 0 1px 0 rgba(255,255,255,0.5);
+    }
+    .btn.primary .icon {
+      background: rgba(26,21,9,0.16);
+      border-color: rgba(26,21,9,0.25);
+      color: #201a0c;
+    }
+    .btn.primary .txt small { color: rgba(32,26,12,0.72); }
+    .btn.primary .arrow { color: rgba(32,26,12,0.6); }
+
+    @media (hover: hover) and (pointer: fine) {
+      .btn:hover { transform: translateY(-2px); border-color: var(--soft-gold); box-shadow: 0 18px 40px rgba(0,0,0,0.85); }
+      .btn.primary:hover { border-color: transparent; box-shadow: 0 18px 44px rgba(160,120,50,0.55), inset 0 1px 0 rgba(255,255,255,0.55); }
+    }
+    .btn:active { transform: translateY(0) scale(0.995); }
+    .btn:focus-visible, .lang-btn:focus-visible {
+      outline: 2px solid rgba(240,216,154,0.95);
+      outline-offset: 3px;
+    }
+
+    /* About */
+    .about-wrap { margin-top: 22px; }
+    .about-label {
+      display: block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
       color: var(--muted);
       margin-bottom: 10px;
     }
-    .card-divider {
-      height: 1px; width: 100%;
-      background: linear-gradient(90deg, transparent, rgba(214,180,103,0.6), transparent);
-      margin-bottom: 10px;
-    }
-    .card-meta {
-      display: grid;
-      gap: 4px;
-      font-size: 9px;
-      color: var(--muted);
-      line-height: 1.45;
-      letter-spacing: 0.09em;
+    .about { font-size: 14px; line-height: 1.7; color: var(--text); display: none; }
+    .about.is-visible { display: block; }
+    .about strong { color: var(--soft-gold); font-weight: 600; }
+
+    /* Footer meta */
+    .meta {
+      margin-top: 22px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px 18px;
+      font-size: 10px;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      text-align: left;
+      color: var(--muted);
+      text-align: center;
     }
-    @media (max-width: 360px) {
-      .shell { padding: 13px 13px 18px; }
-      .logo-mark { width: 38px; height: 38px; }
-      .brand-row { gap: 10px; }
-      .badge { font-size: 8px; letter-spacing: 0.08em; }
-      h1 { font-size: 25px; }
-      h1 span { font-size: 19px; }
-      .subtitle { font-size: 10px; letter-spacing: 0.05em; }
-      .card-inner { gap: 11px; }
-      .avatar { width: 68px; height: 68px; }
-      .card-name { font-size: 13px; }
-      .card-role,
-      .card-meta { font-size: 8px; letter-spacing: 0.07em; }
-    }
-    @media (min-width: 760px) {
-      body {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 32px 16px;
-      }
-      .shell {
-        max-width: 980px;
-        border-radius: 32px;
-        padding: 28px 28px 32px;
-      }
-      .shell-inner {
-        display: grid;
-        grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.95fr);
-        gap: 32px;
-        align-items: center;
-      }
-      .right-panel {
-        order: 0;
-        justify-self: center;
-      }
-      .card {
-        max-width: 290px;
-        border-radius: 28px;
-        padding: 22px 20px;
-      }
-      .card-inner {
-        display: block;
-      }
-      .card-copy {
-        min-width: auto;
-      }
-      .avatar-wrap {
-        margin-bottom: 14px;
-      }
-      .avatar {
-        width: 108px;
-        height: 108px;
-      }
-      .actions {
-        display: flex;
-        flex-wrap: wrap;
-        margin-bottom: 22px;
-      }
-      .btn {
-        width: auto;
-        flex: 1 1 150px;
-        justify-content: flex-start;
-      }
-      .btn span.icon {
-        font-size: 13px;
-      }
-      h1 {
-        font-size: 34px;
-        letter-spacing: 0.16em;
-      }
-      h1 span {
-        font-size: 30px;
-        letter-spacing: 0.2em;
-      }
-      .subtitle {
-        font-size: 17px;
-        letter-spacing: 0.18em;
-      }
-      .card-name,
-      .card-role,
-      .card-meta {
-        text-align: center;
-      }
-      .card-role {
-        font-size: 11px;
-        letter-spacing: 0.14em;
-        margin-bottom: 14px;
-      }
-      .card-divider {
-        margin-bottom: 14px;
-      }
-      .card-meta {
-        gap: 6px;
-        font-size: 11px;
-        letter-spacing: 0.11em;
-      }
-    }
+    .meta span { display: inline-flex; align-items: center; gap: 6px; }
+
     .noscript-fallback {
-      max-width: 460px;
+      max-width: 430px;
       margin: 24px auto;
       padding: 16px;
       border-radius: 16px;
-      border: 1px solid rgba(214,180,103,0.42);
+      border: 1px solid var(--line);
       background: rgba(12,12,12,0.85);
       color: var(--muted);
       font-size: 13px;
       line-height: 1.5;
       text-align: center;
     }
+
+    /* Entrance animation */
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(14px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    body.ready .shell { animation: rise 520ms ease-out both; }
+
+    @media (min-width: 460px) {
+      .shell { padding: 32px 30px 28px; }
+      h1 { font-size: 36px; }
+    }
+    @media (max-width: 340px) {
+      h1 { font-size: 28px; }
+      .avatar-wrap { width: 116px; height: 116px; }
+      .btn { min-height: 52px; }
+    }
+
     @media (prefers-reduced-motion: reduce) {
-      *,
-      *::before,
-      *::after {
+      *, *::before, *::after {
         transition-duration: 0.01ms !important;
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
@@ -511,114 +367,101 @@
 </head>
 <body>
   <noscript>
-    <style>body { visibility: visible !important; }</style>
-    <div class="noscript-fallback">JavaScript is disabled. The language switcher and full experience require JavaScript to be enabled.</div>
+    <style>
+      body { visibility: visible !important; }
+      .about[data-lang="en"] { display: block !important; }
+    </style>
+    <div class="noscript-fallback">JavaScript is disabled. Enable it for the language switcher and the full experience.</div>
   </noscript>
+
   <main class="shell">
-    <div class="shell-inner">
-      <section class="left-panel">
-        <div class="brand-row">
-          <div class="logo-mark">
-            <img src="logo-gold-88.png" alt="JF monogram logo for Juan Moscoso" width="88" height="88" decoding="async" />
-          </div>
-          <div>
-            <div class="badge">
-              <span class="badge-dot" aria-hidden="true"></span>
-              <span data-en="Open to global opportunities" data-es="Abierto a oportunidades globales">Open to global opportunities</span>
-            </div>
-          </div>
+    <div class="top-row">
+      <div class="logo-mark">
+        <img src="logo-gold-88.png" alt="Pittahaya monogram logo" width="88" height="88" decoding="async" />
+      </div>
+      <div class="lang-toggle" role="group" aria-label="Language selector">
+        <button class="lang-btn active" data-lang-btn="en" type="button" aria-pressed="true">EN</button>
+        <button class="lang-btn" data-lang-btn="es" type="button" aria-pressed="false">ES</button>
+      </div>
+    </div>
+
+    <header class="hero">
+      <div class="avatar-wrap">
+        <div class="avatar">
+          <img src="profile.jpg" alt="Portrait of Juan Moscoso" width="264" height="264" decoding="async" fetchpriority="high" />
         </div>
+      </div>
+      <div class="badge">
+        <span class="badge-dot" aria-hidden="true"></span>
+        <span data-en="Available for new projects" data-es="Disponible para nuevos proyectos">Available for new projects</span>
+      </div>
+      <h1>Juan Moscoso</h1>
+      <p class="role"><strong data-en="Founder of Pittahaya" data-es="Fundador de Pittahaya">Founder of Pittahaya</strong></p>
+      <p class="credential" data-en="Digital solutions · Websites · AI · Automation" data-es="Soluciones digitales · Webs · IA · Automatización">Digital solutions · Websites · AI · Automation</p>
+    </header>
 
-        <header>
-          <h1><span>Juan</span> Moscoso</h1>
-          <p class="subtitle" data-en="Bachelor of Commerce | Canada West University (UCW)" data-es="Licenciatura en Comercio | Canada West University (UCW)">Bachelor of Commerce | Canada West University (UCW)</p>
-        </header>
+    <div class="divider"></div>
 
-        <div class="lang-toggle" aria-label="Language selector">
-          <button class="lang-btn active" data-lang-btn="en" type="button" aria-pressed="true">English</button>
-          <button class="lang-btn" data-lang-btn="es" type="button" aria-pressed="false">Español</button>
-        </div>
+    <nav class="actions" aria-label="Contact and links">
+      <a class="btn primary" id="site-link" href="https://www.pittahaya.com/en" target="_blank" rel="noopener noreferrer"
+         data-href-en="https://www.pittahaya.com/en" data-href-es="https://www.pittahaya.com">
+        <span class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" role="img" focusable="false"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.93 6h-2.95a15.7 15.7 0 0 0-1.38-3.56A8.03 8.03 0 0 1 18.93 8ZM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96ZM4.26 14a7.96 7.96 0 0 1 0-4h3.38a16.6 16.6 0 0 0 0 4H4.26Zm.81 2h2.95c.34 1.28.8 2.48 1.38 3.56A8.03 8.03 0 0 1 5.07 16Zm2.95-8H5.07a8.03 8.03 0 0 1 4.33-3.56A15.7 15.7 0 0 0 8.02 8ZM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82A13.6 13.6 0 0 1 12 19.96ZM14.34 14H9.66a14.7 14.7 0 0 1 0-4h4.68a14.7 14.7 0 0 1 0 4Zm.24 5.56c.58-1.08 1.04-2.28 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56ZM16.36 14a16.6 16.6 0 0 0 0-4h3.38a7.96 7.96 0 0 1 0 4h-3.38Z"/></svg>
+        </span>
+        <span class="txt">
+          <span data-en="Visit Pittahaya" data-es="Visitar Pittahaya">Visit Pittahaya</span>
+          <small data-en="Our website" data-es="Nuestro sitio web">Our website</small>
+        </span>
+        <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
 
-        <div class="actions">
-          <a class="btn" href="https://wa.me/17783187994" target="_blank" rel="noopener noreferrer">
-            <span class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" role="img" focusable="false">
-                <path d="M12.04 2C6.5 2 2 6.42 2 11.86c0 1.91.56 3.77 1.62 5.36L2.07 22l4.96-1.5a10.15 10.15 0 0 0 5 1.3h.01c5.54 0 10.03-4.42 10.03-9.86S17.58 2 12.04 2Zm0 18.13h-.01a8.44 8.44 0 0 1-4.31-1.19l-.31-.18-2.94.89.96-2.81-.2-.29a8.09 8.09 0 0 1-1.3-4.39c0-4.52 3.68-8.19 8.12-8.19 2.16 0 4.18.83 5.71 2.34a8.07 8.07 0 0 1 2.37 5.75c0 4.51-3.68 8.18-8.11 8.18Zm4.49-6.13c-.24-.12-1.43-.7-1.65-.77-.22-.08-.38-.12-.54.12-.16.23-.62.77-.76.93-.14.16-.28.18-.52.06-.24-.12-1-.36-1.91-1.14-.71-.61-1.19-1.36-1.33-1.59-.14-.23-.01-.35.11-.47.11-.11.24-.29.36-.43.12-.14.16-.24.24-.39.08-.16.04-.29-.02-.41-.06-.12-.54-1.28-.74-1.75-.2-.48-.4-.41-.54-.42h-.46c-.16 0-.41.06-.63.29-.22.23-.84.81-.84 1.98s.86 2.3.98 2.46c.12.16 1.68 2.67 4.15 3.64.59.23 1.05.37 1.41.47.59.16 1.13.14 1.56.08.48-.07 1.43-.58 1.63-1.15.2-.57.2-1.05.14-1.15-.06-.1-.22-.16-.46-.27Z"/>
-              </svg>
-            </span>
-            <span data-en="WhatsApp" data-es="WhatsApp">WhatsApp</span>
-          </a>
-          <a class="btn" href="tel:+17783187994">
-            <span class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" role="img" focusable="false">
-                <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.31.56 3.57.56a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.26.19 2.45.56 3.57a1 1 0 0 1-.24 1.02l-2.2 2.2Z"/>
-              </svg>
-            </span>
-            <span data-en="Phone" data-es="Teléfono">Phone</span>
-          </a>
-          <a class="btn" href="mailto:moscoso777@gmail.com">
-            <span class="icon">@</span>
-            <span data-en="Email" data-es="Correo">Email</span>
-          </a>
-          <a class="btn secondary" href="https://www.linkedin.com/in/juan-moscoso-3595bb21b" target="_blank" rel="noopener noreferrer">
-            <span class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" role="img" focusable="false">
-                <path d="M5.5 8.5A1.5 1.5 0 1 1 5.5 5a1.5 1.5 0 0 1 0 3.5ZM4 10h3v10H4V10Zm5 0h2.87v1.37h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.59V20h-3v-4.95c0-1.18-.02-2.7-1.64-2.7-1.64 0-1.89 1.28-1.89 2.61V20H9V10Z"/>
-              </svg>
-            </span>
-            <span data-en="LinkedIn" data-es="LinkedIn">LinkedIn</span>
-          </a>
-          <a class="btn secondary" href="https://www.instagram.com/__churos/" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile: @__churos">
-            <span class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" role="img" focusable="false">
-                <path d="M8 3h8c2.76 0 5 2.24 5 5v8c0 2.76-2.24 5-5 5H8c-2.76 0-5-2.24-5-5V8c0-2.76 2.24-5 5-5Zm0 2a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm4 3.75A3.25 3.25 0 1 1 12 15.25 3.25 3.25 0 0 1 12 8.75Zm0 2A1.25 1.25 0 1 0 12 13.25 1.25 1.25 0 0 0 12 10.75Zm4.35-2.55a.85.85 0 1 1-.85.85.85.85 0 0 1 .85-.85Z"/>
-              </svg>
-            </span>
-            <span data-en="Instagram" data-es="Instagram">Instagram</span>
-          </a>
-        </div>
+      <a class="btn" href="mailto:jfmcorp@jfmcorporation.com">
+        <span class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" role="img" focusable="false"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm0 2v.4l8 5 8-5V6H4Zm16 12V8.4l-8 5-8-5V18h16Z"/></svg>
+        </span>
+        <span class="txt">
+          <span data-en="Email" data-es="Correo">Email</span>
+          <small>jfmcorp@jfmcorporation.com</small>
+        </span>
+        <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></span>
+      </a>
 
-        <article class="about active" data-lang="en">
-          <span class="label">About</span>
-          <p>
-            Bachelor of Commerce - Canada West University (UCW), with a background in global business and capital
-            markets. Selectively engaged in opportunities where relationships, positioning, and long-term alignment
-            converge. Focused on connecting people, capital, and ideas where clarity and quality define the
-            potential for enduring value.
-          </p>
-        </article>
+      <a class="btn" href="tel:+17783187994">
+        <span class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" role="img" focusable="false"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.31.56 3.57.56a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.26.19 2.45.56 3.57a1 1 0 0 1-.24 1.02l-2.2 2.2Z"/></svg>
+        </span>
+        <span class="txt">
+          <span data-en="Call" data-es="Llamar">Call</span>
+          <small>+1 778 318 7994</small>
+        </span>
+        <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></span>
+      </a>
 
-        <article class="about" data-lang="es">
-          <span class="label">Perfil</span>
-          <p>
-            Licenciado en Comercio - Canada West University (UCW), con formación en negocios globales y mercado de
-            capitales. Participación selectiva en oportunidades donde convergen relaciones, posicionamiento y
-            alineación a largo plazo. Enfoque en conectar personas, capital e ideas, donde la claridad y la calidad
-            determinan el potencial de generar valor sostenido.
-          </p>
-        </article>
-      </section>
+      <a class="btn" href="https://www.linkedin.com/in/juan-moscoso-3595bb21b" target="_blank" rel="noopener noreferrer">
+        <span class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" role="img" focusable="false"><path d="M5.5 8.5A1.5 1.5 0 1 1 5.5 5a1.5 1.5 0 0 1 0 3.5ZM4 10h3v10H4V10Zm5 0h2.87v1.37h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.59V20h-3v-4.95c0-1.18-.02-2.7-1.64-2.7-1.64 0-1.89 1.28-1.89 2.61V20H9V10Z"/></svg>
+        </span>
+        <span class="txt">
+          <span>LinkedIn</span>
+          <small data-en="Professional profile" data-es="Perfil profesional">Professional profile</small>
+        </span>
+        <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
+    </nav>
 
-      <aside class="right-panel">
-        <div class="card">
-          <div class="card-inner">
-            <div class="avatar-wrap">
-              <div class="avatar">
-                <img src="profile.jpg" alt="Portrait of Juan Moscoso" width="108" height="108" decoding="async" />
-              </div>
-            </div>
-            <div class="card-copy">
-              <div class="card-name">Juan Moscoso</div>
-              <div class="card-role" data-en="Bachelor of Commerce | UCW" data-es="Licenciatura en Comercio | UCW">Bachelor of Commerce | UCW</div>
-              <div class="card-divider"></div>
-              <div class="card-meta">
-                <div data-en="Global Business &amp; Investments" data-es="Negocios Globales e Inversiones">Global Business &amp; Investments</div>
-                <div data-en="English &amp; Spanish" data-es="Inglés y Español">English &amp; Spanish</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </aside>
+    <div class="about-wrap">
+      <span class="about-label" data-en="About" data-es="Perfil">About</span>
+      <article class="about is-visible" data-lang="en">
+        <p><strong>Founder of Pittahaya</strong>, a digital solutions business focused on building websites, AI agents, and automation systems for small businesses and entrepreneurs.</p>
+      </article>
+      <article class="about" data-lang="es">
+        <p><strong>Fundador de Pittahaya</strong>, un negocio de soluciones digitales enfocado en crear sitios web, agentes de IA y sistemas de automatización para pequeñas empresas y emprendedores.</p>
+      </article>
+    </div>
+
+    <div class="meta">
+      <span data-en="Bachelor of Commerce · UCW" data-es="Licenciatura en Comercio · UCW">Bachelor of Commerce · UCW</span>
+      <span data-en="English &amp; Spanish" data-es="Inglés y Español">English &amp; Spanish</span>
     </div>
   </main>
 

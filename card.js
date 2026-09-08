@@ -20,31 +20,27 @@
     reveal();
   }
 
+  var STORAGE_KEY = 'juan-card-language-v2';
   var langButtons = document.querySelectorAll('[data-lang-btn]');
   var aboutBlocks = document.querySelectorAll('.about[data-lang]');
   var localizedText = document.querySelectorAll('[data-en][data-es]');
-
-  function setActiveState(collection, attrName, value) {
-    Array.prototype.forEach.call(collection, function (node) {
-      var isActive = node.getAttribute(attrName) === value;
-      if (node.hasAttribute('data-lang-btn')) {
-        node.setAttribute('aria-pressed', isActive ? 'true' : 'false');
-      }
-      if (isActive) {
-        node.classList.add('active');
-      } else {
-        node.classList.remove('active');
-      }
-    });
-  }
+  var siteLink = document.getElementById('site-link');
 
   function applyLanguage(lang) {
     if (lang !== 'en' && lang !== 'es') {
       lang = 'en';
     }
     document.documentElement.lang = lang;
-    setActiveState(langButtons, 'data-lang-btn', lang);
-    setActiveState(aboutBlocks, 'data-lang', lang);
+
+    Array.prototype.forEach.call(langButtons, function (btn) {
+      var isActive = btn.getAttribute('data-lang-btn') === lang;
+      btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+      btn.classList.toggle('active', isActive);
+    });
+
+    Array.prototype.forEach.call(aboutBlocks, function (block) {
+      block.classList.toggle('is-visible', block.getAttribute('data-lang') === lang);
+    });
 
     Array.prototype.forEach.call(localizedText, function (node) {
       var value = node.getAttribute('data-' + lang);
@@ -53,8 +49,15 @@
       }
     });
 
+    if (siteLink) {
+      var href = siteLink.getAttribute('data-href-' + lang);
+      if (href) {
+        siteLink.setAttribute('href', href);
+      }
+    }
+
     try {
-      window.localStorage.setItem('juan-card-language-v2', lang);
+      window.localStorage.setItem(STORAGE_KEY, lang);
     } catch (error) {}
   }
 
@@ -65,11 +68,13 @@
   });
 
   var initialLanguage = 'en';
-
   try {
-    var savedLanguage = window.localStorage.getItem('juan-card-language-v2');
+    var savedLanguage = window.localStorage.getItem(STORAGE_KEY);
     if (savedLanguage === 'en' || savedLanguage === 'es') {
       initialLanguage = savedLanguage;
+    } else if (typeof navigator !== 'undefined' && navigator.language &&
+               navigator.language.toLowerCase().indexOf('es') === 0) {
+      initialLanguage = 'es';
     }
   } catch (error) {}
 
