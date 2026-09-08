@@ -1,0 +1,2 @@
+body { visibility: visible !important; }
+.about[data-lang="en"] { display: block !important; }
